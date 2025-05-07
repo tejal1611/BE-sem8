@@ -1,0 +1,13 @@
+
+    Open windows command prompt or powershell by running as administrator and run the following command wsl --install.
+    After installation is done, set up your username and password.
+    Run commands sudo apt-get update, sudo apt install mpich and sudo apt install git.
+    Clone this repo: git clone https://github.com/afnan47/Quicksort-Using-MPI.
+    Move into the directory cloned: cd Quicksort-Using-MPI/.
+    Compile the code: mpiCC quick_sort_MPI.cpp -o quick_sort_MPI.
+    Edit input file: nano input.txt or vim input.txt.(If you are not used to Linux editors, run explorer.exe . command to open explorer in the current folder. You can then edit the input file using notepad or use other tools such as VSCode)
+    First enter the number of elements in your array and then the elements. For Example: 5 71 64 -12 434 3.
+    Save your input file and exit.
+    Run mpirun -np 4 ./quick_sort_MPI input.txt output.txt.
+
+According to the number of processes you want you can change the value for the -np flag. For example, -np 4, -np 10. You do not need to compile the program again if you make changes in input.txt, simply do step 10.
